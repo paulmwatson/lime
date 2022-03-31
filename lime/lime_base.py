@@ -202,6 +202,5 @@ class LimeBase(object):
             print('Prediction_local', local_pred,)
             print('Right:', neighborhood_labels[0, label])
         return (easy_model.intercept_,
-                sorted(zip(used_features, easy_model.coef_),
-                       key=lambda x: np.abs(x[1]), reverse=True),
+                zip(used_features, easy_model.coef_),
                 prediction_score, local_pred)
