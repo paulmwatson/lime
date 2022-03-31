@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='lime',
-      version='0.2.0.3',
+      version='0.2.0.4',
       description='Local Interpretable Model-Agnostic Explanations for machine learning classifiers',
       url='http://github.com/marcotcr/lime',
       author='Marco Tulio Ribeiro',
