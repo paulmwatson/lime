@@ -107,10 +107,7 @@ class LimeBase(object):
                 return indices
             else:
                 weighted_data = coef * data[0]
-                feature_weights = sorted(
-                    zip(range(data.shape[1]), weighted_data),
-                    key=lambda x: np.abs(x[1]),
-                    reverse=True)
+                feature_weights = zip(range(data.shape[1]), weighted_data)
                 return np.array([x[0] for x in feature_weights[:num_features]])
         elif method == 'lasso_path':
             weighted_data = ((data - np.average(data, axis=0, weights=weights))
